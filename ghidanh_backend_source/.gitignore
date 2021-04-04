@@ -1,0 +1,10 @@
+/obj
+/bin
+/.vs
+/.config
+appsettings.json
+/Properties/*
+!/Properties/launchSettings.json
+/wwwroot/*
+
+/runtimes

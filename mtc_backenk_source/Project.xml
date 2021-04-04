@@ -1,0 +1,392 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Project</name>
+    </assembly>
+    <members>
+        <member name="M:Project.App.Validations.FluentValidationExtensions.CheckStringTimeSpan(System.String,System.String)">
+            <summary>
+            "c" ==> 00:00:00
+            "g" ==> 3.17:25:30.5000000
+            "G" ==> 0:18:30:00,0000000
+            </summary>
+            <param name="strTimeSpan"></param>
+            <param name="format"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Project.Modules.App.Controllers.SupportAppController.Login(Project.Modules.Devices.Requests.LoginDeviceRequest)">
+            <summary>
+            Login device 
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Project.Modules.App.Controllers.SupportAppController.Logout">
+            <summary>
+            Log out device (feat update api get schedule by time)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Project.Modules.App.Controllers.SupportAppController.UpdateMemory(Project.Modules.Devices.Requests.UpdateMemory)">
+            <summary>
+            Cập nhật dung lượng thiết bị (Total memory/ used memory)
+            Thông qua api, MQTT
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Project.Modules.Devices.Requests.StoreDevice.DeviceName">
+             <summary>
+             
+             </summary>
+            <example>Led</example>
+        </member>
+        <member name="P:Project.Modules.Devices.Requests.StoreDevice.LoginName">
+             <summary>
+             
+             </summary>
+            <example>192.168.11.27</example>
+        </member>
+        <member name="P:Project.Modules.Devices.Requests.StoreDevice.DevicePass">
+             <summary>
+             
+             </summary>
+            <example>123123123</example>
+        </member>
+        <member name="P:Project.Modules.Devices.Requests.StoreDevice.DeviceStatus">
+             <summary>
+             
+             </summary>
+            <example>1</example>
+        </member>
+        <member name="P:Project.Modules.Devices.Requests.StoreDevice.DeviceComment">
+             <summary>
+             
+             </summary>
+            <example>led comment</example>
+        </member>
+        <member name="P:Project.Modules.Devices.Requests.StoreDevice.DeviceMemory">
+             <summary>
+             
+             </summary>
+            <example>10000</example>
+        </member>
+        <member name="P:Project.Modules.Devices.Requests.StoreDevice.DeviceTypeId">
+             <summary>
+             
+             </summary>
+            <example>1</example>
+        </member>
+        <member name="P:Project.Modules.Devices.Requests.StoreDevice.DeviceLocation">
+             <summary>
+             
+             </summary>
+            <example>TPHCM</example>
+        </member>
+        <member name="P:Project.Modules.Devices.Requests.StoreDevice.DeviceMACAddress">
+             <summary>
+             
+             </summary>
+            <example>192.168.11.23</example>
+        </member>
+        <member name="P:Project.Modules.Devices.Requests.StoreDevice.DeviceSku">
+             <summary>
+             
+             </summary>
+            <example>1921681123</example>
+        </member>
+        <member name="M:Project.Modules.Groups.Controllers.GroupController.ShowUserTable(Project.App.Helpers.PaginationRequest,System.String)">
+            <summary>
+            Chỉ supperAdmin và user trong group mới thấy được user trong Group đó
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Project.Modules.Medias.Controllers.MediaController.GetList(Project.Modules.Medias.Requests.ListMediaIdRequest)">
+            <summary>
+            Luyên Thêm Hỗ trợ Vcpmc
+            </summary>
+        </member>
+        <member name="M:Project.Modules.Medias.Controllers.MediaController.GetMediaByIds(Project.Modules.Medias.Requests.GetMediaByIdsRequest)">
+            <summary>
+            Kiểm tra media có free không.
+            1: Free (Duyệt rồi)
+            0: Không free (Chưa duyệt)
+            -1: Không free (Từ chối)
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Project.Modules.Medias.Controllers.MediaController.CheckMediaInGroup(Project.Modules.Medias.Requests.CheckMediaInGroupRequest)">
+            <summary>
+            Check media in group 
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Project.Modules.Medias.Controllers.MediaController.ShareIntoGroup(Project.Modules.Medias.Requests.ShareIntoGroupRequest)">
+            <summary>
+            Share medias into group
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Project.Modules.Medias.Controllers.MediaController.ShareMultipleIntoGroup(Project.Modules.Medias.Requests.ShareMultipleIntoGroupRequest)">
+            <summary>
+            Share media into multiple group
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Project.Modules.Medias.Controllers.MediaController.ShareMutipAllGroup(Project.Modules.Medias.Requests.ShareMediasAllGroupRequest)">
+            <summary>
+            Share list media to all group unexpired 
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Project.Modules.Schedules.Entities.Schedule.ScheduleRepeatValue">
+            <summary>
+            ScheduleRepeatValue has data when ScheduleRepeat != Non and Daily
+            Example : 
+                + Weekly : Mon , Tue , Wed ... Sun
+                + Monthly : 01 , 02, 03 ... 31
+                + Yearly : 01/01 , 02/01 , 12/12 ....
+            Effect : Show customers what they have chosen (client use)
+            </summary>
+        </member>
+        <member name="P:Project.Modules.Schedules.Entities.Schedule.ScheduleRepeatValueDetail">
+            <summary>
+            ScheduleRepeatValueDetail has data when ScheduleRepeat != Non and Daily
+            Example Data : 2021-03-02 (yyyy-MM-dd)
+            Effect : Detailed data to get and compare date schedule (server use)
+            </summary>
+        </member>
+        <member name="P:Project.Modules.Schedules.Requests.CalendarRequest.DateFrom">
+            <summary>
+            
+            </summary>
+            <example>2021-03-01</example>
+        </member>
+        <member name="P:Project.Modules.Schedules.Requests.CalendarRequest.DateTo">
+            <summary>
+            
+            </summary>
+            <example>2021-03-31</example>
+        </member>
+        <member name="P:Project.Modules.Schedules.Requests.GetScheduleByDevice.ScheduleDateBegin">
+            <summary>
+            
+            </summary>
+            <example>2021-03-01</example>
+        </member>
+        <member name="P:Project.Modules.Schedules.Requests.GetScheduleByDevice.ScheduleDateEnd">
+            <summary>
+            
+            </summary>
+            <example>2021-03-31</example>
+        </member>
+        <member name="P:Project.Modules.Schedules.Requests.StoreScheduleNonDeviceRequest.ScheduleDateTimeBeginStr">
+            <summary>
+            
+            </summary>
+            <example>2021-03-01 00:00:01</example>
+        </member>
+        <member name="P:Project.Modules.Schedules.Requests.StoreScheduleNonDeviceRequest.ScheduleDateTimeEndStr">
+            <summary>
+            
+            </summary>
+            <example>2021-03-31 23:59:59</example>
+        </member>
+        <member name="P:Project.Modules.Schedules.Requests.StoreScheduleNonDeviceRequest.ScheduleTimeBeginStr">
+            <summary>
+            
+            </summary>
+            <example>08:00:00</example>
+        </member>
+        <member name="P:Project.Modules.Schedules.Requests.StoreScheduleNonDeviceRequest.ScheduleTimeEndStr">
+            <summary>
+            
+            </summary>
+            <example>12:00:00</example>
+        </member>
+        <member name="P:Project.Modules.Schedules.Requests.StoreScheduleRequest.ScheduleDateTimeBeginStr">
+            <summary>
+            
+            </summary>
+            <example>2021-03-01 00:00:01</example>
+        </member>
+        <member name="P:Project.Modules.Schedules.Requests.StoreScheduleRequest.ScheduleDateTimeEndStr">
+            <summary>
+            
+            </summary>
+            <example>2021-03-31 23:59:59</example>
+        </member>
+        <member name="P:Project.Modules.Schedules.Requests.StoreScheduleRequest.ScheduleTimeBeginStr">
+            <summary>
+            
+            </summary>
+            <example>08:00:00</example>
+        </member>
+        <member name="P:Project.Modules.Schedules.Requests.StoreScheduleRequest.ScheduleTimeEndStr">
+            <summary>
+            
+            </summary>
+            <example>12:00:00</example>
+        </member>
+        <member name="P:Project.Modules.Schedules.Requests.UpdateScheduleRequest.ScheduleDateTimeBeginStr">
+            <summary>
+            
+            </summary>
+            <example>2021-03-01 00:00:01</example>
+        </member>
+        <member name="P:Project.Modules.Schedules.Requests.UpdateScheduleRequest.ScheduleDateTimeEndStr">
+            <summary>
+            
+            </summary>
+            <example>2021-03-31 23:59:59</example>
+        </member>
+        <member name="P:Project.Modules.Schedules.Requests.UpdateScheduleRequest.ScheduleTimeBeginStr">
+            <summary>
+            
+            </summary>
+            <example>08:00:00</example>
+        </member>
+        <member name="P:Project.Modules.Schedules.Requests.UpdateScheduleRequest.ScheduleTimeEndStr">
+            <summary>
+            
+            </summary>
+            <example>12:00:00</example>
+        </member>
+        <member name="M:Project.Modules.Settings.Controllers.SettingController.Store(Project.Modules.Settings.Validations.StoreValidation)">
+            <summary>Create setting mới </summary>
+            <remarks>
+            Sample value of message
+            
+                POST /Todo
+                {
+                   "SettingKey": "Key1",
+                   "SettingValue": {key:"Key1"},
+                   "SettingType" : 2
+                }
+                SettingType : {
+                    String : 1,
+                    Object : 2,
+                    Array : 3
+                }
+                
+            </remarks>
+        </member>
+        <member name="M:Project.Modules.Settings.Controllers.SettingController.Update(Project.Modules.Settings.Requests.UpdateSettingRequest,System.String)">
+            <summary>Update setting </summary>
+            <remarks>
+            Sample value of message
+            
+                Put /Todo
+                {
+                   "SettingKey" : "SettingKey"
+                   "SettingValue": {key:"Key1"},
+                   "SettingType" : 2
+                }
+                SettingType : {
+                    String : 1,
+                    Object : 2,
+                    Array : 3
+                }
+            </remarks>
+        </member>
+        <member name="M:Project.Modules.Settings.Controllers.SettingController.ShowByWithKey(System.String)">
+            <summary>show detail setting </summary>
+        </member>
+        <member name="M:Project.Modules.Settings.Controllers.SettingController.ShowAll(Project.App.Helpers.PaginationRequest)">
+            <summary>Get All Setting </summary>
+        </member>
+        <member name="M:Project.Modules.Settings.Controllers.SettingController.Delete(System.String)">
+            <summary>Delete Setting </summary>
+        </member>
+        <member name="M:Project.Modules.Users.Controllers.PermissionsController.GetPermissionByLevel(System.Int32)">
+            <summary>
+             USER = 0 ||
+             SUPERADMIN = 1
+            </summary>
+            <param name="level"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Project.Modules.Users.Controllers.RolesController.ShowAllByLevel(System.Int32)">
+            <summary>
+             USER = 0 ||
+             SUPERADMIN = 1 ||
+            </summary>
+            <param name="level"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Project.Modules.Users.Controllers.UsersController.UpdateMe(Project.Modules.Users.Requests.UpdateProfileRequest)">
+            <summary>
+            Update me
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Project.Modules.Users.Controllers.UsersController.DeleteRange(Project.Modules.Users.Requests.DeleteUserRequest)">
+            <summary>
+            1 =>Token level User - Chỉ xóa được trong group nó  ||
+            2 =>Token level SuperAdmin - Xóa được cả user lẫn SuperAdmin
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Project.Modules.Users.Controllers.UsersController.UpdatePermissionUser(System.String,Project.Modules.Users.Requests.UpdatePermissionUserRequest)">
+            <summary>
+            Cập nhật permission : Gửi tất cả quyền của user, quyền cũ không gửi lên = xóa 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Project.Modules.Users.Middlewares.CheckPermissonUserMiddleware">
+            <summary>
+            Kiểm tra quyền user có thay dổi trong db so với token . Có thì bắt login lại để cập nhật lại quyền cho user.
+            </summary>
+        </member>
+        <member name="P:Project.Modules.Users.Requests.LoginRequest.UserEmail">
+             <summary>
+             
+             </summary>
+            <example>noreply@alta.com.vn</example>
+        </member>
+        <member name="P:Project.Modules.Users.Requests.LoginRequest.Password">
+            <summary>
+            
+            </summary>
+            <example>123123123</example>
+        </member>
+        <member name="M:Project.Modules.Users.Services.UserService.Edit(Project.Modules.Users.Requests.UpdateUserRequest,System.String)">
+            <summary>
+            Kiem tra Id user
+            Kiem ra email 
+            </summary>
+            <param name="request"></param>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Project.Modules.Users.Services.UserService.Store(Project.Modules.Users.Requests.StoreUserRequest)">
+            <summary>
+            Kiem tra Email da ton tai chua
+            </summary>
+            <param name="storeUser"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GeneralHelper.GetBaseUrl(Microsoft.AspNetCore.Http.HttpContext,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="httpContext">
+            Getting the current url of the request depends on whether you use Https or not?
+            </param>
+            <param name="useHttps">
+            Option to use Https (The parameter is taken from the UseHttps property in appsetting.json):
+                There used: true
+                Do not use: false
+            </param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

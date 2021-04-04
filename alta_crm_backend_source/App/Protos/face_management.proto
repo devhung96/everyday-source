@@ -1,0 +1,80 @@
+syntax = "proto3";
+package Face_Management;
+import "App/Protos/common.proto";
+import "App/Protos/google/api/annotations.proto";
+//python3.8 -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. --experimental_allow_proto3_=true  ./face_management/face_management.proto 
+message FaceRequest{
+    string bucket=1;
+    string objectName=2;
+    string repository=3;
+     string externalId=4;
+     bool train=5;
+}
+
+message FaceResponse{
+    string id=5;
+     string url=4;
+    string repository=2;
+     string externalId=1;
+     string message=3;
+     float score=6;
+}
+
+message FaceRemoveRequest{
+    string id=1;
+    string repository=2;
+}
+
+message FaceRemoveExternalRequest{
+    string externalId=1;
+    string repository=2;
+}
+
+
+message FaceListRequest{
+    string repository=2;
+     string query=1;
+     int32 pageSize=3;
+     string pageNextState=4;
+}
+
+
+message FaceListResponse{
+    repeated FaceResponse data=1;
+     string pageNextState=3;
+     string message=2;
+}
+
+service FaceManagementService {
+    rpc Ping(Common.PING) returns (Common.PING);
+    rpc register (FaceRequest) returns (FaceResponse){
+        option (google.api.http) = {
+            post: "/register/{repository}"
+            body: "*"
+        };
+    }
+    rpc detect (FaceRequest) returns (FaceResponse){
+        option (google.api.http) = {
+            post: "/detect/{repository}"
+            body: "*"
+        };
+    }
+    rpc remove (FaceRemoveRequest) returns (Common.HTTP){
+        option (google.api.http) = {
+            delete: "/remove/{repository}/{id}"
+            body: "*"
+        };
+    }
+    rpc remove_external_id (FaceRemoveExternalRequest) returns (Common.HTTP){
+        option (google.api.http) = {
+            delete: "/remove_external_id/{repository}/{externalId}"
+            body: "*"
+        };
+    }
+    rpc list (FaceListRequest) returns (FaceListResponse){
+        option (google.api.http) = {
+            post: "/list/"
+            body: "*"
+        };
+    };
+}

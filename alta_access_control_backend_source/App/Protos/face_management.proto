@@ -1,0 +1,53 @@
+syntax = "proto2";
+import "App/Protos/common.proto";
+
+
+package Face_Management;
+message FaceRequest{
+    required string bucket=1;
+    required string objectName=2;
+    required string repository=3;
+    optional string externalId=4;
+}
+
+message FaceResponse{
+    required string id=5;
+    optional string url=4;
+    required string repository=2;
+    optional string externalId=1;
+    optional string message=3;
+    optional float score=6;
+}
+
+message FaceRemoveRequest{
+    required string id=1;
+    required string repository=2;
+}
+
+message FaceRemoveExternalRequest{
+    required string externalId=1;
+    required string repository=2;
+}
+
+
+message FaceListRequest{
+    required string repository=2;
+    optional string query=1;
+    optional int32 pageSize=3;
+    optional string pageNextState=4;
+}
+
+
+message FaceListResponse{
+    repeated FaceResponse data=1;
+    optional string pageNextState=3;
+    optional string message=2;
+}
+
+service FaceManagementService {
+    rpc register (FaceRequest) returns (FaceResponse){}
+    rpc detect (FaceRequest) returns (FaceResponse){}
+    rpc remove (FaceRemoveRequest) returns (Common.HTTP){}
+    rpc remove_external_id (FaceRemoveExternalRequest) returns (Common.HTTP){}
+    rpc list (FaceListRequest) returns (FaceListResponse);
+}

@@ -1,0 +1,13 @@
+/obj
+/bin
+/.vs
+appsettings.json
+
+/runtimes
+/Properties/PublishProfiles
+/Properties
+
+
+/wwwroot/*
+!/wwwroot/Template
+/Tesst

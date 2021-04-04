@@ -1,0 +1,699 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Project</name>
+    </assembly>
+    <members>
+        <member name="M:Project.App.Validations.FluentValidationExtensions.CheckStringTimeSpan(System.String,System.String)">
+            <summary>
+            "c" ==> 00:00:00
+            "g" ==> 3.17:25:30.5000000
+            "G" ==> 0:18:30:00,0000000
+            </summary>
+            <param name="strTimeSpan"></param>
+            <param name="format"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Project.Modules.Aws.Controllers.AwsController.UploadFile(Project.Modules.Aws.Requests.UploadFileRequest)">
+            <summary>
+            ### Effect -- Upload hình lên S3
+            ### Artist -- An
+            ### Des -- Backend Test
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Project.Modules.Aws.Controllers.AwsController.GetFile(Project.Modules.Aws.Requests.GetFileRequest)">
+            <summary>
+            ### Effect -- Get hình ở S3
+            ### Artist -- An
+            ### Des -- Backend Test
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Project.Modules.Aws.Controllers.AwsController.Delete(Project.Modules.Aws.Requests.DeleteFileRequest)">
+            <summary>
+            ### Effect -- Delete hình ở S3
+            ### Artist -- An
+            ### Des -- Backend Test
+            </summary>
+            /// <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Project.Modules.Detections.Controllers.DetectionsController.Detection(Project.Modules.Detections.Requests.DetectTagDeviceRequest)">
+            <summary>
+            ### Effect -- Xác thực người dùng qua thiết bị (Hiện chỉ có FaceId)
+            ### Artist -- An
+            ### Des -- App
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Project.Modules.Logs.Controllers.LogsController.GetAllLog(Project.App.Helpers.PaginationRequest)">
+            <summary>
+            ### Effect -- Get tất cả log (Detections)
+            ### Artist -- An
+            ### Des -- Frontend
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Project.Modules.RegisterDetects.Entities.RegisterDetect.RgDectectUserId">
+            <summary>
+            User id của hệ thống khác 
+            </summary>
+        </member>
+        <member name="P:Project.Modules.RegisterDetects.Entities.RegisterDetect.RgDectectKey">
+            <summary>
+            Key : Để dectect 
+            = Face ID
+            = Card ID
+            </summary>
+        </member>
+        <member name="P:Project.Modules.RegisterDetects.Entities.RegisterDetect.TagCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Project.Modules.RegisterDetects.Entities.RegisterDetect.ModeId">
+            <summary>
+            Loại xác thực : Face, CardID
+            </summary>
+        </member>
+        <member name="P:Project.Modules.RegisterDetects.Entities.RegisterDetect.TicketTypeId">
+            <summary>
+            Device mà user đc phép truy cập vào
+            </summary>
+        </member>
+        <member name="P:Project.Modules.RegisterDetects.Entities.RegisterDetect.RgDectectExtension">
+            <summary>
+            Lưu dữ liệu client muốn thêm
+            </summary>
+        </member>
+        <member name="P:Project.Modules.RegisterDetects.Entities.RegisterDetectDetail.RgDectectDetailDateBegin">
+            <summary>
+            Thời gian bắt đầu vào.
+            </summary>
+        </member>
+        <member name="P:Project.Modules.RegisterDetects.Entities.RegisterDetectDetail.RgDectectDetailDateEnd">
+            <summary>
+            Thời gian hết hạn.
+            </summary>
+        </member>
+        <member name="P:Project.Modules.RegisterDetects.Entities.RegisterDetectDetail.RgDectectDetailRepeat">
+            <summary>
+            Loại repeat của lịch
+            </summary>
+        </member>
+        <member name="P:Project.Modules.RegisterDetects.Entities.RegisterDetectDetail.RgDectectDetailRepeatValue">
+            <summary>
+            Giá trị tương ứng với loại repeat
+            </summary>
+        </member>
+        <member name="P:Project.Modules.RegisterDetects.Entities.RegisterDetectDetail.RgDectectDetailTimeBegin">
+            <summary>
+            Thời gian bắt đầu trong ngày mà user có quyền truy cập vào.
+            </summary>
+        </member>
+        <member name="P:Project.Modules.RegisterDetects.Entities.RegisterDetectDetail.RgDectectDetailTimeEnd">
+            <summary>
+            Thời gian hết hạn trong ngày mà user có quyền truy cập vào.
+            </summary>
+        </member>
+        <member name="M:GeneralHelper.GetBaseUrl(Microsoft.AspNetCore.Http.HttpContext,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="httpContext">
+            Getting the current url of the request depends on whether you use Https or not?
+            </param>
+            <param name="useHttps">
+            Option to use Https (The parameter is taken from the UseHttps property in appsetting.json):
+                There used: true
+                Do not use: false
+            </param>
+            <returns></returns>
+        </member>
+        <member name="T:Common.CommonReflection">
+            <summary>Holder for reflection information generated from App/Protos/common.proto</summary>
+        </member>
+        <member name="P:Common.CommonReflection.Descriptor">
+            <summary>File descriptor for App/Protos/common.proto</summary>
+        </member>
+        <member name="F:Common.HTTP.MessageFieldNumber">
+            <summary>Field number for the "message" field.</summary>
+        </member>
+        <member name="F:Common.HTTP.StatusFieldNumber">
+            <summary>Field number for the "status" field.</summary>
+        </member>
+        <member name="F:Common.String.ValueFieldNumber">
+            <summary>Field number for the "value" field.</summary>
+        </member>
+        <member name="F:Common.PING.NonceFieldNumber">
+            <summary>Field number for the "nonce" field.</summary>
+        </member>
+        <member name="T:FaceManagement.FaceManagementReflection">
+            <summary>Holder for reflection information generated from App/Protos/face_management.proto</summary>
+        </member>
+        <member name="P:FaceManagement.FaceManagementReflection.Descriptor">
+            <summary>File descriptor for App/Protos/face_management.proto</summary>
+        </member>
+        <member name="F:FaceManagement.FaceRequest.BucketFieldNumber">
+            <summary>Field number for the "bucket" field.</summary>
+        </member>
+        <member name="P:FaceManagement.FaceRequest.HasBucket">
+            <summary>Gets whether the "bucket" field is set</summary>
+        </member>
+        <member name="M:FaceManagement.FaceRequest.ClearBucket">
+            <summary>Clears the value of the "bucket" field</summary>
+        </member>
+        <member name="F:FaceManagement.FaceRequest.ObjectNameFieldNumber">
+            <summary>Field number for the "objectName" field.</summary>
+        </member>
+        <member name="P:FaceManagement.FaceRequest.HasObjectName">
+            <summary>Gets whether the "objectName" field is set</summary>
+        </member>
+        <member name="M:FaceManagement.FaceRequest.ClearObjectName">
+            <summary>Clears the value of the "objectName" field</summary>
+        </member>
+        <member name="F:FaceManagement.FaceRequest.RepositoryFieldNumber">
+            <summary>Field number for the "repository" field.</summary>
+        </member>
+        <member name="P:FaceManagement.FaceRequest.HasRepository">
+            <summary>Gets whether the "repository" field is set</summary>
+        </member>
+        <member name="M:FaceManagement.FaceRequest.ClearRepository">
+            <summary>Clears the value of the "repository" field</summary>
+        </member>
+        <member name="F:FaceManagement.FaceRequest.ExternalIdFieldNumber">
+            <summary>Field number for the "externalId" field.</summary>
+        </member>
+        <member name="P:FaceManagement.FaceRequest.HasExternalId">
+            <summary>Gets whether the "externalId" field is set</summary>
+        </member>
+        <member name="M:FaceManagement.FaceRequest.ClearExternalId">
+            <summary>Clears the value of the "externalId" field</summary>
+        </member>
+        <member name="F:FaceManagement.FaceResponse.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="P:FaceManagement.FaceResponse.HasId">
+            <summary>Gets whether the "id" field is set</summary>
+        </member>
+        <member name="M:FaceManagement.FaceResponse.ClearId">
+            <summary>Clears the value of the "id" field</summary>
+        </member>
+        <member name="F:FaceManagement.FaceResponse.UrlFieldNumber">
+            <summary>Field number for the "url" field.</summary>
+        </member>
+        <member name="P:FaceManagement.FaceResponse.HasUrl">
+            <summary>Gets whether the "url" field is set</summary>
+        </member>
+        <member name="M:FaceManagement.FaceResponse.ClearUrl">
+            <summary>Clears the value of the "url" field</summary>
+        </member>
+        <member name="F:FaceManagement.FaceResponse.RepositoryFieldNumber">
+            <summary>Field number for the "repository" field.</summary>
+        </member>
+        <member name="P:FaceManagement.FaceResponse.HasRepository">
+            <summary>Gets whether the "repository" field is set</summary>
+        </member>
+        <member name="M:FaceManagement.FaceResponse.ClearRepository">
+            <summary>Clears the value of the "repository" field</summary>
+        </member>
+        <member name="F:FaceManagement.FaceResponse.ExternalIdFieldNumber">
+            <summary>Field number for the "externalId" field.</summary>
+        </member>
+        <member name="P:FaceManagement.FaceResponse.HasExternalId">
+            <summary>Gets whether the "externalId" field is set</summary>
+        </member>
+        <member name="M:FaceManagement.FaceResponse.ClearExternalId">
+            <summary>Clears the value of the "externalId" field</summary>
+        </member>
+        <member name="F:FaceManagement.FaceResponse.MessageFieldNumber">
+            <summary>Field number for the "message" field.</summary>
+        </member>
+        <member name="P:FaceManagement.FaceResponse.HasMessage">
+            <summary>Gets whether the "message" field is set</summary>
+        </member>
+        <member name="M:FaceManagement.FaceResponse.ClearMessage">
+            <summary>Clears the value of the "message" field</summary>
+        </member>
+        <member name="F:FaceManagement.FaceResponse.ScoreFieldNumber">
+            <summary>Field number for the "score" field.</summary>
+        </member>
+        <member name="P:FaceManagement.FaceResponse.HasScore">
+            <summary>Gets whether the "score" field is set</summary>
+        </member>
+        <member name="M:FaceManagement.FaceResponse.ClearScore">
+            <summary>Clears the value of the "score" field</summary>
+        </member>
+        <member name="F:FaceManagement.FaceRemoveRequest.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="P:FaceManagement.FaceRemoveRequest.HasId">
+            <summary>Gets whether the "id" field is set</summary>
+        </member>
+        <member name="M:FaceManagement.FaceRemoveRequest.ClearId">
+            <summary>Clears the value of the "id" field</summary>
+        </member>
+        <member name="F:FaceManagement.FaceRemoveRequest.RepositoryFieldNumber">
+            <summary>Field number for the "repository" field.</summary>
+        </member>
+        <member name="P:FaceManagement.FaceRemoveRequest.HasRepository">
+            <summary>Gets whether the "repository" field is set</summary>
+        </member>
+        <member name="M:FaceManagement.FaceRemoveRequest.ClearRepository">
+            <summary>Clears the value of the "repository" field</summary>
+        </member>
+        <member name="F:FaceManagement.FaceRemoveExternalRequest.ExternalIdFieldNumber">
+            <summary>Field number for the "externalId" field.</summary>
+        </member>
+        <member name="P:FaceManagement.FaceRemoveExternalRequest.HasExternalId">
+            <summary>Gets whether the "externalId" field is set</summary>
+        </member>
+        <member name="M:FaceManagement.FaceRemoveExternalRequest.ClearExternalId">
+            <summary>Clears the value of the "externalId" field</summary>
+        </member>
+        <member name="F:FaceManagement.FaceRemoveExternalRequest.RepositoryFieldNumber">
+            <summary>Field number for the "repository" field.</summary>
+        </member>
+        <member name="P:FaceManagement.FaceRemoveExternalRequest.HasRepository">
+            <summary>Gets whether the "repository" field is set</summary>
+        </member>
+        <member name="M:FaceManagement.FaceRemoveExternalRequest.ClearRepository">
+            <summary>Clears the value of the "repository" field</summary>
+        </member>
+        <member name="F:FaceManagement.FaceListRequest.RepositoryFieldNumber">
+            <summary>Field number for the "repository" field.</summary>
+        </member>
+        <member name="P:FaceManagement.FaceListRequest.HasRepository">
+            <summary>Gets whether the "repository" field is set</summary>
+        </member>
+        <member name="M:FaceManagement.FaceListRequest.ClearRepository">
+            <summary>Clears the value of the "repository" field</summary>
+        </member>
+        <member name="F:FaceManagement.FaceListRequest.QueryFieldNumber">
+            <summary>Field number for the "query" field.</summary>
+        </member>
+        <member name="P:FaceManagement.FaceListRequest.HasQuery">
+            <summary>Gets whether the "query" field is set</summary>
+        </member>
+        <member name="M:FaceManagement.FaceListRequest.ClearQuery">
+            <summary>Clears the value of the "query" field</summary>
+        </member>
+        <member name="F:FaceManagement.FaceListRequest.PageSizeFieldNumber">
+            <summary>Field number for the "pageSize" field.</summary>
+        </member>
+        <member name="P:FaceManagement.FaceListRequest.HasPageSize">
+            <summary>Gets whether the "pageSize" field is set</summary>
+        </member>
+        <member name="M:FaceManagement.FaceListRequest.ClearPageSize">
+            <summary>Clears the value of the "pageSize" field</summary>
+        </member>
+        <member name="F:FaceManagement.FaceListRequest.PageNextStateFieldNumber">
+            <summary>Field number for the "pageNextState" field.</summary>
+        </member>
+        <member name="P:FaceManagement.FaceListRequest.HasPageNextState">
+            <summary>Gets whether the "pageNextState" field is set</summary>
+        </member>
+        <member name="M:FaceManagement.FaceListRequest.ClearPageNextState">
+            <summary>Clears the value of the "pageNextState" field</summary>
+        </member>
+        <member name="F:FaceManagement.FaceListResponse.DataFieldNumber">
+            <summary>Field number for the "data" field.</summary>
+        </member>
+        <member name="F:FaceManagement.FaceListResponse.PageNextStateFieldNumber">
+            <summary>Field number for the "pageNextState" field.</summary>
+        </member>
+        <member name="P:FaceManagement.FaceListResponse.HasPageNextState">
+            <summary>Gets whether the "pageNextState" field is set</summary>
+        </member>
+        <member name="M:FaceManagement.FaceListResponse.ClearPageNextState">
+            <summary>Clears the value of the "pageNextState" field</summary>
+        </member>
+        <member name="F:FaceManagement.FaceListResponse.MessageFieldNumber">
+            <summary>Field number for the "message" field.</summary>
+        </member>
+        <member name="P:FaceManagement.FaceListResponse.HasMessage">
+            <summary>Gets whether the "message" field is set</summary>
+        </member>
+        <member name="M:FaceManagement.FaceListResponse.ClearMessage">
+            <summary>Clears the value of the "message" field</summary>
+        </member>
+        <member name="P:FaceManagement.FaceManagementService.Descriptor">
+            <summary>Service descriptor</summary>
+        </member>
+        <member name="T:FaceManagement.FaceManagementService.FaceManagementServiceClient">
+            <summary>Client for FaceManagementService</summary>
+        </member>
+        <member name="M:FaceManagement.FaceManagementService.FaceManagementServiceClient.#ctor(Grpc.Core.ChannelBase)">
+            <summary>Creates a new client for FaceManagementService</summary>
+            <param name="channel">The channel to use to make remote calls.</param>
+        </member>
+        <member name="M:FaceManagement.FaceManagementService.FaceManagementServiceClient.#ctor(Grpc.Core.CallInvoker)">
+            <summary>Creates a new client for FaceManagementService that uses a custom <c>CallInvoker</c>.</summary>
+            <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+        </member>
+        <member name="M:FaceManagement.FaceManagementService.FaceManagementServiceClient.#ctor">
+            <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+        </member>
+        <member name="M:FaceManagement.FaceManagementService.FaceManagementServiceClient.#ctor(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Protected constructor to allow creation of configured clients.</summary>
+            <param name="configuration">The client configuration.</param>
+        </member>
+        <member name="M:FaceManagement.FaceManagementService.FaceManagementServiceClient.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+        </member>
+        <member name="T:RepositoriesManagement.RepositoryReflection">
+            <summary>Holder for reflection information generated from App/Protos/repository.proto</summary>
+        </member>
+        <member name="P:RepositoriesManagement.RepositoryReflection.Descriptor">
+            <summary>File descriptor for App/Protos/repository.proto</summary>
+        </member>
+        <member name="F:RepositoriesManagement.RepositoryCreateRequest.NameFieldNumber">
+            <summary>Field number for the "name" field.</summary>
+        </member>
+        <member name="F:RepositoriesManagement.RepositoryCreateRequest.TypeFieldNumber">
+            <summary>Field number for the "type" field.</summary>
+        </member>
+        <member name="F:RepositoriesManagement.RepositoryCreateRequest.CommentFieldNumber">
+            <summary>Field number for the "comment" field.</summary>
+        </member>
+        <member name="F:RepositoriesManagement.RepositoryCreateResponse.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="F:RepositoriesManagement.RepositoryCreateResponse.MessageFieldNumber">
+            <summary>Field number for the "message" field.</summary>
+        </member>
+        <member name="F:RepositoriesManagement.RepositoriesResponse.DataFieldNumber">
+            <summary>Field number for the "data" field.</summary>
+        </member>
+        <member name="F:RepositoriesManagement.RepositoriesResponse.NextPageTokenFieldNumber">
+            <summary>Field number for the "nextPageToken" field.</summary>
+        </member>
+        <member name="F:RepositoriesManagement.RepositoriesResponse.MessageFieldNumber">
+            <summary>Field number for the "message" field.</summary>
+        </member>
+        <member name="F:RepositoriesManagement.SearchRequest.PageSizeFieldNumber">
+            <summary>Field number for the "pageSize" field.</summary>
+        </member>
+        <member name="F:RepositoriesManagement.SearchRequest.QueryFieldNumber">
+            <summary>Field number for the "query" field.</summary>
+        </member>
+        <member name="F:RepositoriesManagement.SearchRequest.PagingStateFieldNumber">
+            <summary>Field number for the "pagingState" field.</summary>
+        </member>
+        <member name="F:RepositoriesManagement.RepositoryType.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="F:RepositoriesManagement.RepositoryType.NameFieldNumber">
+            <summary>Field number for the "name" field.</summary>
+        </member>
+        <member name="F:RepositoriesManagement.RepositoryType.MessageFieldNumber">
+            <summary>Field number for the "message" field.</summary>
+        </member>
+        <member name="F:RepositoriesManagement.RepositoryTypesResponse.DataFieldNumber">
+            <summary>Field number for the "data" field.</summary>
+        </member>
+        <member name="F:RepositoriesManagement.RepositoryTypesResponse.MessageFieldNumber">
+            <summary>Field number for the "message" field.</summary>
+        </member>
+        <member name="F:RepositoriesManagement.RepositoryTypesResponse.NextPageTokenFieldNumber">
+            <summary>Field number for the "nextPageToken" field.</summary>
+        </member>
+        <member name="F:RepositoriesManagement.Repository.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="F:RepositoriesManagement.Repository.RepositoryTypeFieldNumber">
+            <summary>Field number for the "repositoryType" field.</summary>
+        </member>
+        <member name="F:RepositoriesManagement.Repository.NameFieldNumber">
+            <summary>Field number for the "name" field.</summary>
+        </member>
+        <member name="F:RepositoriesManagement.Repository.CommentFieldNumber">
+            <summary>Field number for the "comment" field.</summary>
+        </member>
+        <member name="F:RepositoriesManagement.Repository.TotalImageFieldNumber">
+            <summary>Field number for the "totalImage" field.</summary>
+        </member>
+        <member name="F:RepositoriesManagement.Repository.CreateAtFieldNumber">
+            <summary>Field number for the "createAt" field.</summary>
+        </member>
+        <member name="F:RepositoriesManagement.Repository.MessageFieldNumber">
+            <summary>Field number for the "message" field.</summary>
+        </member>
+        <member name="T:RepositoriesManagement.RepositoryManagement">
+             <summary>
+            python3.8 -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. --experimental_allow_proto3_optional=true repositories_management/repository.proto 
+             </summary>
+        </member>
+        <member name="P:RepositoriesManagement.RepositoryManagement.Descriptor">
+            <summary>Service descriptor</summary>
+        </member>
+        <member name="T:RepositoriesManagement.RepositoryManagement.RepositoryManagementClient">
+            <summary>Client for RepositoryManagement</summary>
+        </member>
+        <member name="M:RepositoriesManagement.RepositoryManagement.RepositoryManagementClient.#ctor(Grpc.Core.ChannelBase)">
+            <summary>Creates a new client for RepositoryManagement</summary>
+            <param name="channel">The channel to use to make remote calls.</param>
+        </member>
+        <member name="M:RepositoriesManagement.RepositoryManagement.RepositoryManagementClient.#ctor(Grpc.Core.CallInvoker)">
+            <summary>Creates a new client for RepositoryManagement that uses a custom <c>CallInvoker</c>.</summary>
+            <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+        </member>
+        <member name="M:RepositoriesManagement.RepositoryManagement.RepositoryManagementClient.#ctor">
+            <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+        </member>
+        <member name="M:RepositoriesManagement.RepositoryManagement.RepositoryManagementClient.#ctor(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Protected constructor to allow creation of configured clients.</summary>
+            <param name="configuration">The client configuration.</param>
+        </member>
+        <member name="M:RepositoriesManagement.RepositoryManagement.RepositoryManagementClient.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+        </member>
+        <member name="T:SurveillanceManagement.SurveillanceReflection">
+            <summary>Holder for reflection information generated from App/Protos/surveillance.proto</summary>
+        </member>
+        <member name="P:SurveillanceManagement.SurveillanceReflection.Descriptor">
+            <summary>File descriptor for App/Protos/surveillance.proto</summary>
+        </member>
+        <member name="F:SurveillanceManagement.FaceResponse.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="F:SurveillanceManagement.FaceResponse.RepositoryFieldNumber">
+            <summary>Field number for the "repository" field.</summary>
+        </member>
+        <member name="F:SurveillanceManagement.FaceResponse.ExternalIdFieldNumber">
+            <summary>Field number for the "externalId" field.</summary>
+        </member>
+        <member name="F:SurveillanceManagement.FaceResponse.ScoreFieldNumber">
+            <summary>Field number for the "score" field.</summary>
+        </member>
+        <member name="F:SurveillanceManagement.FaceResponses.FacesFieldNumber">
+            <summary>Field number for the "faces" field.</summary>
+        </member>
+        <member name="F:SurveillanceManagement.FaceResponses.MessageFieldNumber">
+            <summary>Field number for the "message" field.</summary>
+        </member>
+        <member name="F:SurveillanceManagement.SearchRequest.PageSizeFieldNumber">
+            <summary>Field number for the "pageSize" field.</summary>
+        </member>
+        <member name="F:SurveillanceManagement.SearchRequest.QueryFieldNumber">
+            <summary>Field number for the "query" field.</summary>
+        </member>
+        <member name="F:SurveillanceManagement.SearchRequest.PagingStateFieldNumber">
+            <summary>Field number for the "pagingState" field.</summary>
+        </member>
+        <member name="F:SurveillanceManagement.SurveillancesResponse.DataFieldNumber">
+            <summary>Field number for the "data" field.</summary>
+        </member>
+        <member name="F:SurveillanceManagement.SurveillancesResponse.NextPageTokenFieldNumber">
+            <summary>Field number for the "nextPageToken" field.</summary>
+        </member>
+        <member name="F:SurveillanceManagement.SurveillancesResponse.MessageFieldNumber">
+            <summary>Field number for the "message" field.</summary>
+        </member>
+        <member name="F:SurveillanceManagement.SurveillanceRequest.NameFieldNumber">
+            <summary>Field number for the "name" field.</summary>
+        </member>
+        <member name="F:SurveillanceManagement.SurveillanceRequest.RepositoriesFieldNumber">
+            <summary>Field number for the "repositories" field.</summary>
+        </member>
+        <member name="F:SurveillanceManagement.SurveillanceRequest.PushChanelFieldNumber">
+            <summary>Field number for the "pushChanel" field.</summary>
+        </member>
+        <member name="F:SurveillanceManagement.SurveillanceRequest.SubChanelFieldNumber">
+            <summary>Field number for the "subChanel" field.</summary>
+        </member>
+        <member name="F:SurveillanceManagement.SurveillanceRequest.CommentFieldNumber">
+            <summary>Field number for the "comment" field.</summary>
+        </member>
+        <member name="F:SurveillanceManagement.Repository.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="F:SurveillanceManagement.Repository.NameFieldNumber">
+            <summary>Field number for the "name" field.</summary>
+        </member>
+        <member name="F:SurveillanceManagement.Surveillance.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="F:SurveillanceManagement.Surveillance.NameFieldNumber">
+            <summary>Field number for the "name" field.</summary>
+        </member>
+        <member name="F:SurveillanceManagement.Surveillance.PushChanelFieldNumber">
+            <summary>Field number for the "pushChanel" field.</summary>
+        </member>
+        <member name="F:SurveillanceManagement.Surveillance.SubChanelFieldNumber">
+            <summary>Field number for the "subChanel" field.</summary>
+        </member>
+        <member name="F:SurveillanceManagement.Surveillance.RepositoriesFieldNumber">
+            <summary>Field number for the "repositories" field.</summary>
+        </member>
+        <member name="F:SurveillanceManagement.Surveillance.SurveillanceTypeFieldNumber">
+            <summary>Field number for the "surveillanceType" field.</summary>
+        </member>
+        <member name="F:SurveillanceManagement.Surveillance.CommentFieldNumber">
+            <summary>Field number for the "comment" field.</summary>
+        </member>
+        <member name="F:SurveillanceManagement.Surveillance.MessageFieldNumber">
+            <summary>Field number for the "message" field.</summary>
+        </member>
+        <member name="F:SurveillanceManagement.Surveillance.CreateAtFieldNumber">
+            <summary>Field number for the "createAt" field.</summary>
+        </member>
+        <member name="F:SurveillanceManagement.FaceSurveillance.BucketFieldNumber">
+            <summary>Field number for the "bucket" field.</summary>
+        </member>
+        <member name="F:SurveillanceManagement.FaceSurveillance.ObjectNameFieldNumber">
+            <summary>Field number for the "objectName" field.</summary>
+        </member>
+        <member name="F:SurveillanceManagement.FaceSurveillance.SurveillanceFieldNumber">
+            <summary>Field number for the "surveillance" field.</summary>
+        </member>
+        <member name="F:SurveillanceManagement.FaceBase64Surveillance.Base64FieldNumber">
+            <summary>Field number for the "base64" field.</summary>
+        </member>
+        <member name="F:SurveillanceManagement.FaceBase64Surveillance.WidthFieldNumber">
+            <summary>Field number for the "width" field.</summary>
+        </member>
+        <member name="F:SurveillanceManagement.FaceBase64Surveillance.HeightFieldNumber">
+            <summary>Field number for the "height" field.</summary>
+        </member>
+        <member name="F:SurveillanceManagement.FaceBase64Surveillance.SurveillanceFieldNumber">
+            <summary>Field number for the "surveillance" field.</summary>
+        </member>
+        <member name="P:SurveillanceManagement.SurveillanceManagement.Descriptor">
+            <summary>Service descriptor</summary>
+        </member>
+        <member name="T:SurveillanceManagement.SurveillanceManagement.SurveillanceManagementClient">
+            <summary>Client for SurveillanceManagement</summary>
+        </member>
+        <member name="M:SurveillanceManagement.SurveillanceManagement.SurveillanceManagementClient.#ctor(Grpc.Core.ChannelBase)">
+            <summary>Creates a new client for SurveillanceManagement</summary>
+            <param name="channel">The channel to use to make remote calls.</param>
+        </member>
+        <member name="M:SurveillanceManagement.SurveillanceManagement.SurveillanceManagementClient.#ctor(Grpc.Core.CallInvoker)">
+            <summary>Creates a new client for SurveillanceManagement that uses a custom <c>CallInvoker</c>.</summary>
+            <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+        </member>
+        <member name="M:SurveillanceManagement.SurveillanceManagement.SurveillanceManagementClient.#ctor">
+            <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+        </member>
+        <member name="M:SurveillanceManagement.SurveillanceManagement.SurveillanceManagementClient.#ctor(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Protected constructor to allow creation of configured clients.</summary>
+            <param name="configuration">The client configuration.</param>
+        </member>
+        <member name="M:SurveillanceManagement.SurveillanceManagement.SurveillanceManagementClient.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+        </member>
+        <member name="T:Greet.GreetReflection">
+            <summary>Holder for reflection information generated from App/Protos/greet.proto</summary>
+        </member>
+        <member name="P:Greet.GreetReflection.Descriptor">
+            <summary>File descriptor for App/Protos/greet.proto</summary>
+        </member>
+        <member name="T:Greet.HelloRequest">
+            <summary>
+            The request message containing the user's name.
+            </summary>
+        </member>
+        <member name="F:Greet.HelloRequest.NameFieldNumber">
+            <summary>Field number for the "name" field.</summary>
+        </member>
+        <member name="T:Greet.HelloReply">
+            <summary>
+            The response message containing the greetings
+            </summary>
+        </member>
+        <member name="F:Greet.HelloReply.MessageFieldNumber">
+            <summary>Field number for the "message" field.</summary>
+        </member>
+        <member name="T:Greet.Greeter">
+            <summary>
+            The greeting service definition.
+            </summary>
+        </member>
+        <member name="P:Greet.Greeter.Descriptor">
+            <summary>Service descriptor</summary>
+        </member>
+        <member name="T:Greet.Greeter.GreeterClient">
+            <summary>Client for Greeter</summary>
+        </member>
+        <member name="M:Greet.Greeter.GreeterClient.#ctor(Grpc.Core.ChannelBase)">
+            <summary>Creates a new client for Greeter</summary>
+            <param name="channel">The channel to use to make remote calls.</param>
+        </member>
+        <member name="M:Greet.Greeter.GreeterClient.#ctor(Grpc.Core.CallInvoker)">
+            <summary>Creates a new client for Greeter that uses a custom <c>CallInvoker</c>.</summary>
+            <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+        </member>
+        <member name="M:Greet.Greeter.GreeterClient.#ctor">
+            <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+        </member>
+        <member name="M:Greet.Greeter.GreeterClient.#ctor(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Protected constructor to allow creation of configured clients.</summary>
+            <param name="configuration">The client configuration.</param>
+        </member>
+        <member name="M:Greet.Greeter.GreeterClient.SayHello(Greet.HelloRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            Sends a greeting
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:Greet.Greeter.GreeterClient.SayHello(Greet.HelloRequest,Grpc.Core.CallOptions)">
+            <summary>
+            Sends a greeting
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:Greet.Greeter.GreeterClient.SayHelloAsync(Greet.HelloRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            Sends a greeting
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:Greet.Greeter.GreeterClient.SayHelloAsync(Greet.HelloRequest,Grpc.Core.CallOptions)">
+            <summary>
+            Sends a greeting
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:Greet.Greeter.GreeterClient.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+        </member>
+    </members>
+</doc>

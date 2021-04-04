@@ -1,0 +1,66 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+
+import "App/Protos/common.proto";
+package Repositories_Management;
+
+//python3.8 -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. --experimental_allow_proto3_optional=true repositories_management/repository.proto 
+service RepositoryManagement{
+    rpc create (RepositoryCreateRequest) returns (Repository){};
+    rpc get (Repository) returns (Repository) {};
+    rpc list (SearchRequest) returns (RepositoriesResponse) {};
+    rpc delete (Repository) returns (Common.HTTP){};
+
+    rpc create_type (RepositoryType) returns (RepositoryType){};
+    rpc get_type (RepositoryType) returns (RepositoryType){};
+    rpc list_type (google.protobuf.Empty) returns (RepositoryTypesResponse){};
+    rpc delete_type(RepositoryType) returns (Common.HTTP){};
+}
+
+message RepositoryCreateRequest{
+    string name=1;
+    string type=2;
+    string comment=3;
+    
+}
+
+message RepositoryCreateResponse{
+    string id=1;
+    string message=2;
+}
+
+message RepositoriesResponse{
+    repeated Repository data=1;
+    string nextPageToken = 3;
+    string message=2;
+}
+
+message SearchRequest{
+    int32 pageSize=1;
+    string query=2;
+    string pagingState=3;
+}
+
+message RepositoryType{
+    string id=1;
+    string name=2;
+    string message=3;
+}
+
+message RepositoryTypesResponse{
+    repeated RepositoryType data=1;
+    string message=2;
+    string nextPageToken = 3;
+}
+
+message Repository{
+    string id=1;
+    RepositoryType repositoryType=3;
+    string name=2;
+    string comment=4;
+    int32 totalImage=5;
+    google.protobuf.Timestamp createAt=6;
+    string message=7;
+}

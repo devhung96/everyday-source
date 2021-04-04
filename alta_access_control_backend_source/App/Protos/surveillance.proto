@@ -1,0 +1,80 @@
+syntax = "proto3";
+import "google/protobuf/timestamp.proto";
+
+
+
+import "App/Protos/common.proto";
+package Surveillance_Management;
+
+service SurveillanceManagement{
+    rpc Ping(Common.PING) returns (Common.PING);
+    rpc create (SurveillanceRequest) returns (Surveillance){};
+    rpc update (Surveillance) returns (Surveillance){};
+    rpc get (Common.String) returns (Surveillance) {};
+    rpc list (SearchRequest) returns (SurveillancesResponse) {};
+    rpc delete (Surveillance) returns (Common.HTTP){};
+    rpc run (FaceBase64Surveillance) returns (Common.HTTP){};
+    rpc detect (FaceSurveillance) returns (FaceResponses){};
+}
+
+message FaceResponse{
+    string id=3;
+    string repository=2;
+    string externalId=1;
+    float score=4;
+}
+
+message FaceResponses{
+    repeated FaceResponse faces=1;
+    string message=2;
+}
+
+message SearchRequest{
+    int32 pageSize=1;
+    string query=2;
+    string pagingState=3;
+}
+
+message SurveillancesResponse{
+    repeated Surveillance data=1;
+    string nextPageToken = 3;
+    string message=2;
+}
+
+message SurveillanceRequest{
+    string name=2;
+    repeated string repositories=3;
+    string pushChanel=1;
+    string subChanel=5;
+    string comment=4;
+}
+
+message Repository{
+    string id=1;
+    string name=2;
+} 
+
+message Surveillance{
+    string id=1;
+    string name=2;
+     string pushChanel=8;
+    string subChanel=9;
+    repeated Repository repositories=3;
+     string surveillanceType=7;
+     string comment=4;
+     string message=5;
+     google.protobuf.Timestamp createAt=6;
+}
+
+message FaceSurveillance{
+    string bucket=1;
+    string objectName=3;
+    string surveillance=2;
+}
+
+message FaceBase64Surveillance{
+    string base64=1;
+    int32 width=3;
+    int32 height=4;
+    string surveillance=2;
+}

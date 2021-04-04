@@ -1,0 +1,19 @@
+syntax = "proto3";
+package Common;
+// python3.8 -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. --experimental_allow_proto3_optional=true common/common.proto 
+message HTTP{
+    string message=1;
+    int32 status=2;
+}
+
+message String{
+    string value=1;
+}
+
+message Empty {
+
+}
+
+message PING {
+    int64 nonce = 1;
+}

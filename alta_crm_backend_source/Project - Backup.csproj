@@ -1,0 +1,63 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <ServerGarbageCollection>true</ServerGarbageCollection>
+    <UserSecretsId>b231384e-d888-4878-97ea-cd1fc5b2a22e</UserSecretsId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <WarningLevel>0</WarningLevel>
+    <NoWarn>1701;1702;1591</NoWarn>
+    <DocumentationFile>Project.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE</DefineConstants>
+    <NoWarn>1701;1702;1591</NoWarn>
+    <DocumentationFile></DocumentationFile>
+    <DocumentationFile>D:\2020\dotnet\HDBank\hdbank_crm_backenk_source\Project.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+
+    <Content Remove="appsettings - Copy.Example.json" />
+
+    <Folder Include="Modules\OpenVidus\Enities\" />
+  </ItemGroup>
+
+  <ItemGroup>
+
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
+    <PackageReference Include="AWSSDK.S3" Version="3.5.7.2" />
+    <PackageReference Include="Confluent.Kafka" Version="1.5.3" />
+    <PackageReference Include="EPPlus" Version="5.5.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.8.0" />
+    <PackageReference Include="FluentValidation" Version="9.3.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="9.3.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.11.3" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.2.3" />
+    <PackageReference Include="Quartz" Version="3.2.2" />
+    <PackageReference Include="StackExchange.Redis" Version="2.1.58" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Newtonsoft" Version="5.6.3" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.8.0" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.2.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Project.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Protobuf Include="..\..\Proto\weather.proto" GrpcServices="Client" Link="Protos\weather.proto" />
+</ItemGroup>
+
+</Project>

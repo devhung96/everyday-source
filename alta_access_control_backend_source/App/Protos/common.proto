@@ -1,0 +1,18 @@
+syntax = "proto3";
+package Common;
+
+message HTTP{
+    string message=1;
+    int32 status=2;
+}
+
+message String{
+    string value=1;
+}
+
+message Empty {
+
+}
+message PING {
+    int64 nonce = 1;
+}
